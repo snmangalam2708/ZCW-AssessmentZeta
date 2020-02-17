@@ -35,9 +35,9 @@ public class BasicStringUtils {
     public static String reverseThenCamelCase(String str) {
 
         String r = "";
-        for (int i=str.length()-1; i>=0; i--) {
+            for (int i=str.length()-1; i>=0; i--) {
 
-            r += str.charAt(i);
+                r += str.charAt(i);
         }
 
         return (r.substring(0,1).toUpperCase() + r.substring(1));

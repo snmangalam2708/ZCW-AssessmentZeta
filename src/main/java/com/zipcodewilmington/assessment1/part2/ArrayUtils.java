@@ -1,5 +1,16 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import com.sun.tools.hat.internal.util.ArraySorter;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+import static java.util.Arrays.*;
+import static java.util.Arrays.sort;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +22,15 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if (objectArray[i] == objectToCount) {
+                count++;
+            }
+
+        }
+        return count;
     }
 
     /**
@@ -21,7 +40,14 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+
+        int i, j;
+        for (i = j = 0; j < objectArray.length; ++j)
+            if (!objectToRemove.equals(objectArray[j]))
+                objectArray[i++] = objectArray[j];
+        objectArray = copyOf(objectArray, i);
+
+        return objectArray;
     }
 
     /**
@@ -30,7 +56,32 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+
+        sort(objectArray);
+
+        int mc = 1, Object[];
+        Object res = objectArray[0];
+        int cc = 1;
+
+        for (int i = 0; i < objectArray.length - 1; i++) {
+            if (objectArray[i + 1] == objectArray[i])
+                cc++;
+            else {
+                if (cc > mc) {
+                    mc = cc;
+                    res = objectArray[i - 1];
+                }
+                cc = 1;
+            }
+        }
+
+        if (cc > mc) {
+            mc = cc;
+            res = objectArray[objectArray.length - 1];
+        }
+
+        return res;
+
     }
 
 
@@ -40,7 +91,33 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+
+        sort(objectArray);
+
+        int mc = objectArray.length + 1;
+        Object res = -1;
+        int cc = 1;
+
+        for (int i = 1; i < objectArray.length; i++) {
+            if (objectArray[i] == objectArray[i - 1])
+                cc++;
+            else {
+                if (cc < mc) {
+                    mc = cc;
+                    res = objectArray[i - 1];
+                }
+
+                cc = 1;
+            }
+        }
+
+        if (cc < mc) {
+            mc = cc;
+            res = objectArray[objectArray.length - 1];
+        }
+
+        return res;
+
     }
 
     /**
@@ -50,6 +127,37 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+
+       /* sort(objectArray);
+        sort(objectArrayToAdd);
+
+        int k = objectArray.length + objectArrayToAdd.length;
+        Object[] newArray = new Object[k];
+        int pos = 0;
+        for (int i=0; i<objectArray.length; i++) {
+
+            newArray[pos] = objectArray[i];
+            pos++;
+        }
+
+
+        for (int j =0; j<objectArrayToAdd.length; j++)
+        {
+            newArray[pos+1] = objectArrayToAdd[j];
+            pos++;
+        }*/
+
+       /* int l1 = objectArray.length;
+        int l2 = objectArrayToAdd.length;
+        Object[] result = new Object[l1 + l2];
+        System.arraycopy(objectArray, 0, result, 0, l1);
+        System.arraycopy(objectArrayToAdd, 0, result, l1, l2);
+        //System.out.println(Arrays.toString(result));
+
+        return Arrays.toString(result);*/
+
+       return null;
+
     }
 }
+

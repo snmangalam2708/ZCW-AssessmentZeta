@@ -10,12 +10,19 @@ public class Cat extends Pet {
      */
     public Cat(String name, Integer age) {
 
+        String name =.getName();
+        return new Cat(name, age);
+
+
+
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
+
+
     }
 
     /**
@@ -38,6 +45,8 @@ public class Cat extends Pet {
      * @return meow as a string
      */
     public String speak() {
+
+
         return null;
     }
 }

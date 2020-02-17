@@ -6,6 +6,19 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+
+        int r;
+
+        if(k==j) { r = 1; }
+
+        if(k<j) { r = k; }
+
+        else
+                { r = (int) Math.ceil((double) k/ (double)j);
+                //System.out.println(r);
+
+                }
+
+        return r;
     }
 }
