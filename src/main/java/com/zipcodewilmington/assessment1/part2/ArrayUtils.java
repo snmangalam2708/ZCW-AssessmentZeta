@@ -1,11 +1,6 @@
 package com.zipcodewilmington.assessment1.part2;
 
-import com.sun.tools.hat.internal.util.ArraySorter;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 import static java.util.Arrays.*;
@@ -127,37 +122,6 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-
-       /* sort(objectArray);
-        sort(objectArrayToAdd);
-
-        int k = objectArray.length + objectArrayToAdd.length;
-        Object[] newArray = new Object[k];
-        int pos = 0;
-        for (int i=0; i<objectArray.length; i++) {
-
-            newArray[pos] = objectArray[i];
-            pos++;
-        }
-
-
-        for (int j =0; j<objectArrayToAdd.length; j++)
-        {
-            newArray[pos+1] = objectArrayToAdd[j];
-            pos++;
-        }*/
-
-       /* int l1 = objectArray.length;
-        int l2 = objectArrayToAdd.length;
-        Object[] result = new Object[l1 + l2];
-        System.arraycopy(objectArray, 0, result, 0, l1);
-        System.arraycopy(objectArrayToAdd, 0, result, l1, l2);
-        //System.out.println(Arrays.toString(result));
-
-        return Arrays.toString(result);*/
-
-       return null;
-
+        return null;
     }
 }
-

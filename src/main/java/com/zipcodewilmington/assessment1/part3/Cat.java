@@ -10,11 +10,6 @@ public class Cat extends Pet {
      */
     public Cat(String name, Integer age) {
 
-        String name =.getName();
-        return new Cat(name, age);
-
-
-
     }
 
     /**
@@ -47,6 +42,5 @@ public class Cat extends Pet {
     public String speak() {
 
 
-        return null;
     }
 }

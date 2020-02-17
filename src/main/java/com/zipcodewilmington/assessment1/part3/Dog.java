@@ -10,8 +10,6 @@ public class Dog extends Pet {
      */
     public Dog(String name, Integer age) {
 
-        this.getName();
-        this.getAge();
 
     }
 
