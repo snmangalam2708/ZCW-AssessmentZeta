@@ -7,7 +7,10 @@ public class Jumper {
      */
     public int jumps(int k, int j) {
 
-        int r;
+
+        return k / j + k % j;
+
+        /*int r;
 
         if(k==j) { r = 1; }
 
@@ -20,5 +23,6 @@ public class Jumper {
                 }
 
         return r;
+    }*/
     }
 }

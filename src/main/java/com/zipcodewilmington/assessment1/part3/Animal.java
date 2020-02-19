@@ -5,7 +5,7 @@ package com.zipcodewilmington.assessment1.part3;
  */
 public interface Animal {
     String speak();
-
-
+    String name = null;
+    int age =0 ;
 
 }

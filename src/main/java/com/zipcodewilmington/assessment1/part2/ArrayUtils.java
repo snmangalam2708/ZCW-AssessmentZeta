@@ -1,9 +1,11 @@
 package com.zipcodewilmington.assessment1.part2;
 
 
+//import static java.util.Arrays.*;
 
+import java.util.ArrayList;
 
-import static java.util.Arrays.*;
+import static java.util.Arrays.copyOf;
 import static java.util.Arrays.sort;
 
 /**
@@ -122,6 +124,16 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+
+        ArrayList<Object> result = new ArrayList<>();
+
+        for (Object x : objectArray) {
+            result.add(x);
+        }
+        for (Object x : objectArrayToAdd) {
+            result.add(x);
+        }
+        Integer[] array = result.toArray(new Integer[objectArray.length + objectArrayToAdd.length]);
+        return array;
     }
 }
